@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-primary: #25c0f4;
+  --color-accent-gold: #d4af37;
+  --font-display: var(--font-space-grotesk);
+}
+
+@layer base {
+  :root {
+    --bg: #f8fafc;
+    --text: #0f172a;
+    --surface: #ffffff;
+    --border: rgba(37, 192, 244, 0.2);
+  }
+  .dark {
+    --bg: #0b1114;
+    --text: #f1f5f9;
+    --surface: #151f24;
+    --border: rgba(37, 192, 244, 0.15);
+  }
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: var(--font-display);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
